@@ -5,6 +5,7 @@ import { Login } from "./components/Login";
 import { SignUp } from "./components/SignUp";
 import { AuthProvider } from "./context/AuthContext";
 import { PrivateRoute } from "./components/PrivateRoute";
+import { ForgotPassword } from "./components/ForgotPassword";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
       </Stack>
     </AuthProvider>

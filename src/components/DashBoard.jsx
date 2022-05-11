@@ -21,7 +21,7 @@ export const DashBoard = () => {
   return (
     <Stack>
       <Text>Dashboard</Text>
-
+      <Text>{currentUser.email}</Text>
       <Button colorScheme="facebook" onClick={handleLogout}>
         Log out
       </Button>

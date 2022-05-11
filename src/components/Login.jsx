@@ -34,7 +34,7 @@ export const Login = () => {
     setLoading(false);
   };
   return (
-    <Stack>
+    <VStack justifyContent="center">
       <VStack border="1px solid #ddd" p="20px" borderRadius="4px" spacing={3}>
         <Stack>
           <Heading>Log In</Heading>
@@ -47,20 +47,21 @@ export const Login = () => {
               <FormLabel htmlFor="password">Password</FormLabel>
               <Input type="password" id="password" required ref={passwordRef} />
               <Button colorScheme="facebook" disabled={loading} type="submit">
-                Sign Up
+                Log In
               </Button>
+              <HStack justifyContent="center">
+                <Link to="/forgot-password">Forgot Password?</Link>
+              </HStack>
             </Stack>
           </FormControl>
         </form>
       </VStack>
-      <Text>
-        Need an account?
-        <span>
-          <Link to="/signup" bg="blue">
-            Sign Up
-          </Link>
-        </span>
-      </Text>
-    </Stack>
+      <HStack>
+        <Text>Need an account?</Text>
+        <Link to="/signup">
+          <span>Sign Up</span>
+        </Link>
+      </HStack>
+    </VStack>
   );
 };
